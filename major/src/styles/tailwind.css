@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1E40AF; /* blue-800 - Trust-building blue for CTAs and brand elements */
+    --color-primary-foreground: #FFFFFF; /* white - Maximum contrast for CTA text */
+    
+    /* Secondary Colors */
+    --color-secondary: #3B82F6; /* blue-500 - Supporting hierarchy and interactive elements */
+    --color-secondary-foreground: #FFFFFF; /* white - Clear contrast for secondary actions */
+    
+    /* Accent Colors */
+    --color-accent: #10B981; /* emerald-500 - Success metrics and positive reinforcement */
+    --color-accent-foreground: #FFFFFF; /* white - High contrast for accent elements */
+    
+    /* Background Colors */
+    --color-background: #FFFFFF; /* white - Clean canvas maximizing content focus */
+    --color-foreground: #0F172A; /* slate-900 - Maximum contrast for rapid scanning */
+    
+    /* Surface Colors */
+    --color-card: #F8FAFC; /* slate-50 - Subtle section separation without visual noise */
+    --color-card-foreground: #0F172A; /* slate-900 - Consistent text hierarchy */
+    
+    --color-popover: #FFFFFF; /* white - Clean dropdown backgrounds */
+    --color-popover-foreground: #0F172A; /* slate-900 - Readable popover text */
+    
+    /* Muted Colors */
+    --color-muted: #F1F5F9; /* slate-100 - Subtle backgrounds for less emphasis */
+    --color-muted-foreground: #64748B; /* slate-500 - Supporting information without distraction */
+    
+    /* Border & Input */
+    --color-border: #E2E8F0; /* slate-200 - Form inputs and card borders */
+    --color-input: #E2E8F0; /* slate-200 - Input field borders */
+    --color-ring: #1E40AF; /* blue-800 - Focus ring matching primary */
+    
+    /* Status Colors */
+    --color-success: #059669; /* emerald-600 - Form validation and achievement indicators */
+    --color-success-foreground: #FFFFFF; /* white - Clear success messaging */
+    
+    --color-warning: #F59E0B; /* amber-500 - Urgency elements and limited-time offers */
+    --color-warning-foreground: #FFFFFF; /* white - Attention-grabbing warning text */
+    
+    --color-destructive: #DC2626; /* red-600 - Form validation feedback */
+    --color-destructive-foreground: #FFFFFF; /* white - Clear error messaging */
+    
+    --color-error: #DC2626; /* red-600 - Error states and validation */
+    --color-error-foreground: #FFFFFF; /* white - High contrast error text */
+    
+    /* Radius */
+    --radius: 0.5rem; /* 8px - Cards and buttons */
+  }
+
+  .dark {
+    /* Primary Colors */
+    --color-primary: #3B82F6; /* blue-500 - Lighter blue for dark mode visibility */
+    --color-primary-foreground: #0F172A; /* slate-900 - Dark text on light blue */
+    
+    /* Secondary Colors */
+    --color-secondary: #1E40AF; /* blue-800 - Deeper blue for dark mode hierarchy */
+    --color-secondary-foreground: #F8FAFC; /* slate-50 - Light text on dark blue */
+    
+    /* Accent Colors */
+    --color-accent: #10B981; /* emerald-500 - Consistent success color */
+    --color-accent-foreground: #0F172A; /* slate-900 - Dark text on bright accent */
+    
+    /* Background Colors */
+    --color-background: #0F172A; /* slate-900 - Dark canvas */
+    --color-foreground: #F8FAFC; /* slate-50 - Light text for readability */
+    
+    /* Surface Colors */
+    --color-card: #1E293B; /* slate-800 - Elevated dark surfaces */
+    --color-card-foreground: #F8FAFC; /* slate-50 - Light text on dark cards */
+    
+    --color-popover: #1E293B; /* slate-800 - Dark dropdown backgrounds */
+    --color-popover-foreground: #F8FAFC; /* slate-50 - Light popover text */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 - Subtle dark backgrounds */
+    --color-muted-foreground: #94A3B8; /* slate-400 - Muted text in dark mode */
+    
+    /* Border & Input */
+    --color-border: #334155; /* slate-700 - Dark mode borders */
+    --color-input: #334155; /* slate-700 - Dark input borders */
+    --color-ring: #3B82F6; /* blue-500 - Bright focus ring for dark mode */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 - Consistent success color */
+    --color-success-foreground: #0F172A; /* slate-900 - Dark text on success */
+    
+    --color-warning: #F59E0B; /* amber-500 - Consistent warning color */
+    --color-warning-foreground: #0F172A; /* slate-900 - Dark text on warning */
+    
+    --color-destructive: #EF4444; /* red-500 - Brighter error for dark mode */
+    --color-destructive-foreground: #F8FAFC; /* slate-50 - Light text on error */
+    
+    --color-error: #EF4444; /* red-500 - Consistent error color */
+    --color-error-foreground: #F8FAFC; /* slate-50 - Light error text */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-accent {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .backdrop-blur-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .shadow-cta {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+}
