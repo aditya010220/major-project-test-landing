@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
-import ScrollToTop from "components/ScrollToTop";
-import ErrorBoundary from "components/ErrorBoundary";
-import NotFound from "pages/NotFound";
-import LandingPage from './pages/landing-page';
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import LandingPage from "./pages/landing-page";
 
 const Routes = () => {
   return (
